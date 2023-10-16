@@ -402,7 +402,7 @@ func main() {
 			} else {
 				if *cmdWebConPort != 0 {
 					go func() {
-						addr := fmt.Sprintf("127.0.0.1:%d", *cmdWebConPort)
+						addr := fmt.Sprintf("0.0.0.0:%d", *cmdWebConPort)
 						if *cmdWebConPort == 65536 {
 							_addr, _ := net.ResolveTCPAddr("tcp", client.Localaddr)
 							addr = fmt.Sprintf("127.0.0.1:%d", _addr.Port+10)
